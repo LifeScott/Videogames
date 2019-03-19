@@ -1,3 +1,10 @@
-<p>
-  login works!
-</p>
+<div class="container">
+    <form method="GET">
+        Username:<br>
+        <input type="text" name="username" [(ngModel)]="username">
+        <br> Password:<br>
+        <input type="password" name="password" [(ngModel)]="password">
+        <br><br>
+        <input id="form" type="submit" (click)="saveData()" value="Login">
+    </form>
+</div>

@@ -5,7 +5,7 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
     background-color: gray;
     position: fixed;
@@ -21,6 +21,7 @@ li {
     color: black;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 li:hover {
@@ -29,4 +30,9 @@ li:hover {
 
 li:active {
     background-color: aquamarine;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
 }
