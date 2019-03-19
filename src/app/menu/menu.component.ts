@@ -10,8 +10,8 @@ export class MenuComponent implements OnInit {
 
   menuList: MenuItem[] = [
     {id: 1, descrizione: 'Home', selezionato: false},
-    {id: 2, descrizione: 'Lista', selezionato: false},
-    {id: 3, descrizione: 'Modifica', selezionato: false}
+    {id: 2, descrizione: 'List', selezionato: false},
+    {id: 3, descrizione: 'Edit', selezionato: false}
   ];
 
   @Output('showSection')

@@ -1,5 +1,8 @@
-<app-menu (showSection)="changeSection($event)"></app-menu>
+<div>
+    <app-menu (showSection)="changeSection($event)"></app-menu>
+</div>
 <div [ngSwitch]="idSectionToShow">
     <app-home *ngSwitchCase="1"></app-home>
     <app-game-list *ngSwitchCase="2"></app-game-list>
+    <app-list-edit *ngSwitchCase="3"></app-list-edit>
 </div>
