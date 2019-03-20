@@ -1,5 +1,40 @@
+<br>
 <div>
-    <h1>List</h1>
-    <img src="">
-    <p>Desc</p>
+    <ol type="1">
+        <li>
+            <a href="">Game1</a>
+            <p>Date: {{ game | date:'short' }}</p>
+            <p>Currency: {{ gamePrice | currency:'EUR' }}</p>
+            <p></p>
+        </li>
+        <img id="placeHolder" src="\assets\games.png" alt="">
+        <br>
+        <li>
+            <a href="">Game2</a>
+            <p>Date: {{ game | date:'medium' }}</p>
+            <p>Currency: {{ gamePrice | currency:'CAD' }}</p>
+        </li>
+        <img id="placeHolder" src="\assets\games.png" alt="">
+        <br>
+        <li>
+            <a href="">Game3</a>
+            <p>Date: {{ game | date:'long' }}</p>
+            <p>Currency: {{ gamePrice | currency :'CAD':'code' }}</p>
+        </li>
+        <img id="placeHolder" src="\assets\games.png" alt="">
+        <br>
+        <li>
+            <a href="">Game4</a>
+            <p>Date: {{ game | date:'full' }}</p>
+            <p>Currency: {{ gamePrice | currency :'CAD':'symbol-narrow':'4.2-2' }}</p>
+        </li>
+        <img id="placeHolder" src="\assets\games.png" alt="">
+        <br>
+        <li>
+            <a href="">Game5</a>
+            <p>Date: {{ game | date }}</p>
+            <p>Currency: {{ gamePrice | currency: 'CLP'}}</p>
+        </li>
+        <img id="placeHolder" src="\assets\games.png" alt="">
+    </ol>
 </div>

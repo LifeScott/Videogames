@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameListComponent implements OnInit {
 
+  game = new Date();
+  gamePrice :number = 59.99;
+  
   constructor() { }
 
   ngOnInit() {
