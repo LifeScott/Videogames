@@ -5,7 +5,16 @@ div {
     padding: 10px;
 }
 
-input[type=submit] {
+button[type=submit] {
+    margin-right: 10px;
+    background-color: lightgray;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=reset] {
     background-color: lightgray;
     color: black;
     padding: 12px 20px;
@@ -16,11 +25,13 @@ input[type=submit] {
 input[type=text] {
     background-color: lightgray;
     border-radius: 4px;
+    margin: 20px;
 }
 
 input[type=password] {
     background-color: lightgray;
     border-radius: 4px;
+    margin: 20px;
 }
 
 .container {

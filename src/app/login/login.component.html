@@ -1,10 +1,10 @@
 <div class="container">
-    <form method="GET">
-        Username:<br>
-        <input type="text" name="username" [(ngModel)]="username">
-        <br> Password:<br>
-        <input type="password" name="password" [(ngModel)]="password">
-        <br><br>
-        <input id="form" type="submit" (click)="saveData()" value="Login">
+    <form #formVar="ngForm" (ngSubmit)="saveData()">
+        <label>Username: </label>
+        <input type="text" name="username" [(ngModel)]="username" required>
+        <label>Password: </label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+        <button [disabled]="!formVar.form.valid" id="form" type="submit">Login</button>
+        <button id="form" type="reset" (click)="formVar.reset()">Reset</button>
     </form>
 </div>
