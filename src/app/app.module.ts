@@ -10,15 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { ListEditComponent } from './list-edit/list-edit.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './services/auth-guard';
 
 const appRoutes: Routes = [
 
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
 
-  { path: 'game-list', component: GameListComponent },
+  { path: 'game-list', component: GameListComponent, canActivate: [AuthGuard] },
 
-  { path: 'list-edit', component: ListEditComponent },
+  { path: 'list-edit', component: ListEditComponent, canActivate: [AuthGuard] },
 
   { path: '**', redirectTo: '/login', pathMatch: 'full' }
 
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

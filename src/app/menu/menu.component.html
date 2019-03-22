@@ -1,4 +1,5 @@
 <ul>
+    <li>{{name}}</li>
     <li><img id="logo" src="assets/controller.png"></li>
     <li *ngFor="let item of menuList" (click)="showSection(item.id)" [routerLink]="item.linkPath">{{item.descrizione}}</li>
 </ul>
