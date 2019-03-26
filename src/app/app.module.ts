@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -11,17 +11,19 @@ import { ListEditComponent } from './list-edit/list-edit.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './services/auth-guard';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const appRoutes: Routes = [
 
   { path: 'login', component: LoginComponent },
+  { path: 'loginForm', component: LoginFormComponent},
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
 
   { path: 'game-list', component: GameListComponent, canActivate: [AuthGuard] },
 
   { path: 'list-edit', component: ListEditComponent, canActivate: [AuthGuard] },
 
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  { path: '', redirectTo: '/loginForm', pathMatch: 'full' }
 
 ];
 
@@ -32,12 +34,14 @@ const appRoutes: Routes = [
     GameListComponent,
     HomeComponent,
     ListEditComponent,
-    LoginComponent
+    LoginComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

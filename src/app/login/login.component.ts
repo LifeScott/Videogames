@@ -1,6 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { CanActivate } from '@angular/router';
+import { Router } from '@angular/router'; 
 import { LoginService } from '../login.service';
 
 @Component({
